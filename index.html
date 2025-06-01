@@ -1,103 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Menu Interativo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dicas de Presente - Meu Aniversário</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #3498db, #0f2d41);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 20px;
-            position: absolute;
-            top: 0;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 30px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
+    header p {
+      font-size: 1.1em;
+      margin-top: 8px;
+    }
 
-        nav a:hover {
-            color: #000000;
-            transform: scale(1.2);
-        }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
 
-        .content {
-            text-align: center;
-            padding: 40px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            z-index: 1;
-        }
+    .gift-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+    .gift-card img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
 
-        .content p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+    .gift-info {
+      padding: 20px;
+    }
 
-        .button {
-            background-color: #2980b9;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    .gift-info h2 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
 
-        .button:hover {
-            background-color: #2980b9;
-        }
+    .gift-info p {
+      margin: 10px 0;
+    }
 
-    </style>
+    .gift-info a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #2196F3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .gift-info a:hover {
+      background-color: #0b7dda;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    @media (min-width: 700px) {
+      .gift-card {
+        flex-direction: row;
+      }
+
+      .gift-card img {
+        width: 40%;
+        max-height: none;
+      }
+
+      .gift-info {
+        width: 60%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="trabalho.html">Trabalho</a>
-        <a href="redes-sociais.html">Redes Sociais</a>
-    </nav>
+  <header>
+    <h1>🎉 Meu Aniversário Está Chegando!</h1>
+    <p>Confira algumas ideias de presentes incríveis 🎁</p>
+  </header>
 
-    <div class="content">
-        <h1>Bem-vindo ao meu Site!</h1>
-        <p>Explore meu trabalho e redes sociais abaixo.</p>
-        <button class="button" onclick="window.location.href='trabalho.html'">Ver Trabalho</button>
-        <button class="button" onclick="window.location.href='redes-sociais.html'">Redes Sociais</button>
+  <div class="container">
+
+    <!-- Sugestão 1: Mesa de Tênis -->
+    <div class="gift-card">
+      <img src="https://a-static.mlcdn.com.br/800x560/mesa-para-tenis-de-mesa-ping-pong-com-kit-completo-carrefour/carrefouroficial/fb16dc6180/bb398510a3aa1de50035c0c3c29f5145.jpeg" alt="Mesa de Tênis de Mesa">
+      <div class="gift-info">
+        <h2>🎾 Mesa de Tênis de Mesa</h2>
+        <p>Ideal para jogar com amigos e família. Vem com rede, raquetes e bolinhas!</p>
+        <a href="https://m.magazineluiza.com.br/mesa-para-tenis-de-mesa-ping-pong-com-kit-completo-carrefour/p/fb16dc6180/es/mdpp/?&seller_id=carrefouroficial" target="_blank">Ver na loja</a>
+      </div>
     </div>
+
+    <!-- Sugestão 2: Exemplo genérico -->
+    <div class="gift-card">
+      <img src="https://images.unsplash.com/photo-1512499617640-c2f999018b72?auto=format&fit=crop&w=800&q=80" alt="Fone Bluetooth">
+      <div class="gift-info">
+        <h2>🎧 Fone Bluetooth</h2>
+        <p>Um ótimo fone para ouvir música, treinar ou estudar com conforto e qualidade.</p>
+        <a href="#">Ver sugestão</a>
+      </div>
+    </div>
+
+    <!-- Sugestão 3: Exemplo genérico -->
+    <div class="gift-card">
+      <img src="https://images.unsplash.com/photo-1616627980155-cbe8040a3d5c?auto=format&fit=crop&w=800&q=80" alt="Tênis esportivo">
+      <div class="gift-info">
+        <h2>👟 Tênis para Caminhada</h2>
+        <p>Confortável, moderno e perfeito para o dia a dia ou prática esportiva.</p>
+        <a href="#">Ver sugestão</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 - Página feita com carinho 💚
+  </footer>
 
 </body>
 </html>
