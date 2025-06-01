@@ -124,14 +124,17 @@
 
     <!-- Sugestão 2: Exemplo genérico -->
     <div class="gift-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD27Em7zM6olj3Y-e85SJo6uNpidDQnO3ZSWWp7GPe2WwOHl0-uE0q5-U&s=10" alt="Fone Bluetooth">
-      <div class="gift-info">
-        <h2>💵 R$ 1000</h2>
-        <p>Ai eu compro a mesa 😂</p>
-        <a href="#">Chave Pix: 84991284470</a>
-      </div>
-    </div>
-
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD27Em7zM6olj3Y-e85SJo6uNpidDQnO3ZSWWp7GPe2WwOHl0-uE0q5-U&s=10" alt="Fone Bluetooth">
+  <div class="gift-info">
+    <h2>💵 R$ 1000</h2>
+    <p>Aí eu compro a mesa 😂</p>
+    <button onclick="copiarPix()" style="background-color:#4CAF50; border:none; padding:10px 18px; color:white; border-radius:6px; cursor:pointer;">
+      Copiar Chave Pix
+    </button>
+    <p id="mensagem-copiado" style="color:green; display:none; margin-top:10px;">Chave Pix copiada!</p>
+  </div>
+</div>
+    
     <!-- Sugestão 3: Exemplo genérico -->
     <div class="gift-card">
       <img src="https://americatt.net/wp-content/uploads/2021/01/21645__0__dhs_w968_hurricane_long_5_national_15095.jpg" alt="Madeira Clássica">
@@ -148,5 +151,20 @@
     © 2025 - Página feita com carinho 💚
   </footer>
 
+  <script>
+  function copiarPix() {
+    const chave = "84991284470";
+    navigator.clipboard.writeText(chave).then(function() {
+      const msg = document.getElementById("mensagem-copiado");
+      msg.style.display = "block";
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 3000);
+    }, function(err) {
+      alert("Erro ao copiar a chave Pix.");
+    });
+  }
+</script>
+  
 </body>
 </html>
